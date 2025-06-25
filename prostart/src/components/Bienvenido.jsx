@@ -63,7 +63,7 @@ export default function HeroSection() {
             <AnimatedText 
               text="En Prostart, nos especializamos en el desarrollo de software a la medida, ofreciendo soluciones innovadoras y personalizadas para satisfacer las necesidades de nuestros clientes." 
               typingSpeed={50}
-              delay={1.5} // Retraso para que empiece después del título
+              //delay={1.5} // Retraso para que empiece después del título
             />
           </h3>
           <h3 style={{ color: "#ffff" }}>
@@ -71,7 +71,7 @@ export default function HeroSection() {
               text="Nuestro equipo de expertos está comprometido en brindar un servicio excepcional, asegurando que cada proyecto se entregue a tiempo y con 
               la más alta calidad." 
               typingSpeed={50}
-              delay={3.5} // Retraso para que empiece después del primer párrafo
+             
             />
           </h3>
         </div>
