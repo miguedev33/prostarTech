@@ -52,7 +52,7 @@ export default function HeroSection() {
       transition={{ duration: 1 }}
     >
       <div className="main-content">
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem", color: "#ffff" }}>
+        <h1 style={{ fontSize: "2.0rem", marginBottom: "1rem", color: "#ffff" }}>
           <AnimatedText 
             text="Bienvenido a Prostart" 
             typingSpeed={50}
