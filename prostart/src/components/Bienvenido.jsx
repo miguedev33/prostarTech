@@ -58,7 +58,24 @@ export default function HeroSection() {
             typingSpeed={80}
           />
         </h1>
-        <div className="content-text">
+        <div className="content-text"
+        style={{
+  padding: '0 15px',
+  maxWidth: '100%',
+  boxSizing: 'border-box',
+  textAlign: 'left',
+  lineHeight: '1.6'
+}}>
+  <h3 style={{ 
+    color: '#fff',
+    fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+    fontWeight: 'normal',
+    margin: '0 0 1rem 0',
+    wordBreak: 'normal',
+    overflowWrap: 'break-word'
+  }}>
+    
+  </h3>
           <h3 style={{ color: "#ffff" }}>
             <AnimatedText 
               text="En Prostart, nos especializamos en el desarrollo de software a la medida, ofreciendo soluciones innovadoras y personalizadas para satisfacer las necesidades de nuestros clientes." 

@@ -497,3 +497,78 @@ body > * {
     margin-bottom: 1.5rem;
   }
 }
+
+
+.content-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.content-text p,
+.content-text h3 {
+  color: var(--light-text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+
+.content-text h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* Espaciado y alineación para móviles */
+@media (max-width: 767px) {
+  .content-text {
+    padding: 0 15px;
+  }
+  
+  .content-text h3 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+  
+  
+  @media (max-width: 400px) {
+    .content-text {
+      padding: 0 12px;
+    }
+    
+    .content-text h3 {
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+/* Mejoras para la sección hero */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+}
+
+/* Ajuste para el efecto de animación del texto */
+.animated-text-container {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
