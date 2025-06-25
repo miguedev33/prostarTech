@@ -1,0 +1,20 @@
+.work-environment-row {
+  transition: all 0.3s ease;
+  overflow: hidden; /* Para que los efectos no desborden */
+}
+
+.environment-image {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-text h1 {
+  transition: color 0.3s ease;
+}
+
+/* Para mantener la consistencia en el layout durante las animaciones */
+.work-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

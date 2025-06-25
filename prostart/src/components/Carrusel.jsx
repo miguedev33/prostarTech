@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence, color } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import cerdonImg from '../img/cerdon.jpeg';
 import clinicaImg from '../img/clinica.jpeg';
 import codiam from '../img/codiam.jpeg';
@@ -15,24 +15,48 @@ const images = [
   { src: serviciosImg, alt: "Proyecto Servicios" },
 ];
 
-export default function Carrusel() {
-  const [selected, setSelected] = useState(null); // índice o null
+const cardVariants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+    scale: 0.8
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+};
+
+export default function ScrollTriggeredCarousel() {
+  const [selected, setSelected] = useState(null);
 
   return (
     <section className="projects-section">
-      
-      
-      {/* Carrusel horizontal */}
-      <div className="horizontal-scroll-wrapper">
+      <div className="scroll-triggered-container">
         {images.map((img, i) => (
-          <div 
-            key={i} 
-            className="scroll-item" 
-            onClick={() => setSelected(i)} 
-            style={{ cursor: "pointer" }}
+          <motion.div
+            key={i}
+            className="card-container"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: false, amount: 0.5 }}
+            onClick={() => setSelected(i)}
           >
-            <img src={img.src} alt={img.alt} />
-          </div>
+            <div className="splash" />
+            <motion.div className="card" variants={cardVariants}>
+              <img 
+                src={img.src} 
+                alt={img.alt}
+                className="card-image"
+              />
+            </motion.div>
+          </motion.div>
         ))}
       </div>
 
@@ -44,7 +68,7 @@ export default function Carrusel() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelected(null)} // cerrar al click en fondo
+            onClick={() => setSelected(null)}
             style={{
               position: "fixed",
               top: 0, left: 0, right: 0, bottom: 0,
@@ -57,14 +81,13 @@ export default function Carrusel() {
             }}
           >
             <motion.img 
-              key={images[selected].src}
               src={images[selected].src} 
               alt={images[selected].alt}
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              onClick={e => e.stopPropagation()} // evitar cerrar al click en la imagen
+              onClick={e => e.stopPropagation()}
               style={{
                 maxWidth: "90%",
                 maxHeight: "90%",

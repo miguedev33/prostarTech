@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 
 // Assets
 import prostartImg from "./img/prostart.png";
-import Maquina from "./img/pc.jpeg";
-import Maquinas from "./img/pcs.jpeg";
 
 // Components
 import Carrusel from "./components/Carrusel";
@@ -15,6 +13,7 @@ import Img from "./components/Imagen";
 import Slogan from "./components/Slogan";
 import HeroSection from "./components/Bienvenido";
 import Title from "./components/Title";
+import Ambiente from "./components/Ambiente";
 function App() {
   return (
     <div className="app-container">
@@ -39,53 +38,16 @@ function App() {
       </header>
 
       {/* Bienvenido */}
+
       <HeroSection />
       {/* Titulo */}
-      <Title text="Nuestros Proyectos" baseVelocity={-10} />
+      <Title text="Nuestros Proyectos" baseVelocity={-8} />
       {/* Projects Carousel */}
       <Carrusel />
 
       {/* Work Environment Section */}
-      <section className="work-environment">
-            <Title text="Nuestro Ambiente de Trabajo" baseVelocity={10} />
-
-        <div className="work-environment-row">
-          <div className="work-text">
-            <h3>Espacio colaborativo</h3>
-            <p>
-              En Prostart, trabajamos en un ambiente colaborativo y dinámico,
-              donde cada miembro del equipo aporta su experiencia y creatividad
-              para desarrollar soluciones efectivas.
-            </p>
-          </div>
-          <div className="work-image">
-            <Img
-              src={Maquina}
-              alt="Espacio de trabajo colaborativo"
-              className="environment-image"
-            />
-          </div>
-        </div>
-
-        <div className="work-environment-row reverse">
-          <div className="work-text">
-            <h3>Tecnología de vanguardia</h3>
-            <p>
-              Contamos con equipos de última generación y espacios diseñados
-              para fomentar la innovación y la productividad, asegurando que
-              podamos cumplir con los plazos y expectativas de nuestros
-              clientes.
-            </p>
-          </div>
-          <div className="work-image">
-            <Img
-              src={Maquinas}
-              alt="Equipos tecnológicos"
-              className="environment-image"
-            />
-          </div>
-        </div>
-      </section>
+      <Title text="Nuestro Ambiente de Trabajo" baseVelocity={8} />
+      <Ambiente />
 
       {/* Footer con redes sociales */}
       <footer className="app-footer">

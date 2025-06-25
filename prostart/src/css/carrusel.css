@@ -1,55 +1,68 @@
 .projects-section {
-  padding: 1rem;
-
+  width: 100%;
+  padding: 50px 0;
+  background: #0000;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 1rem;
+.scroll-triggered-container {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  padding-bottom: 100px;
 }
 
-/* Contenedor horizontal con scroll si es necesario */
-.horizontal-scroll-wrapper {
+.card-container {
+  overflow: hidden;
   display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding-bottom: 0.5rem;
-  /* Para que haga snap al mover el scroll */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* suaviza scroll en móvil */
-}
-
-/* Cada imagen dentro del carrusel */
-.scroll-item {
-  flex: 0 0 auto;          /* No crece ni encoge, ancho fijo */
-  width: 220px;            /* ancho fijo para todas */
-  height: 150px;           /* altura fija para todas */
-  border-radius: 12px;     /* bordes redondeados */
-  overflow: hidden;        /* recortar bordes redondeados */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: -120px;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-/* Imagen dentro de cada item */
-.scroll-item img {
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(306deg, #6b747a, #3c7be4);
+  clip-path: path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z");
+}
+
+.card {
+  width: 300px;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 0 1px rgba(0,0,0,0.075), 
+              0 0 2px rgba(0,0,0,0.075), 
+              0 0 4px rgba(0,0,0,0.075), 
+              0 0 8px rgba(0,0,0,0.075), 
+              0 0 16px rgba(0,0,0,0.075);
+  transform-origin: 10% 60%;
+  overflow: hidden;
+}
+
+.card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
 }
 
-/* Al pasar el cursor sobre el contenedor o la imagen */
-.scroll-item:hover,
-.scroll-item:hover img {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  z-index: 10;
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card {
+    width: 250px;
+    height: 380px;
+  }
+  
+  .scroll-triggered-container {
+    padding-bottom: 80px;
+  }
 }
-.colorRealizado{
-  color: #FFFFFF;
-}
-

@@ -1,0 +1,16 @@
+.header-slogan {
+  perspective: 100px;
+  
+  background: rgba(0,0,0,0.1);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.flash-effect {
+  animation: flash 0.3s 3;
+}

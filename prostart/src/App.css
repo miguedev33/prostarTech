@@ -27,7 +27,7 @@ html, body, .App {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
+    color: #65fbff;
   background-color: #0e100f; /* fondo oscuro */
   text-align: center;
 }
@@ -214,7 +214,7 @@ html, body, .App {
 @media (max-width: 768px) {
   .app-header {
     flex-direction: column;
-    padding: 15px 0;
+   
   }
 
   .header-slogan {
@@ -242,4 +242,79 @@ html, body, .App {
   .footer-copyright {
     text-align: left;
   }
+}
+
+h1{
+  color: var(--light-text);
+}
+
+p{
+  color: var(--light-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+a {
+  color: #3c7be4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #65fbff;
+}
+
+button {
+  background-color: #3c7be4;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #65fbff;
+  box-shadow: 0 0 10px rgba(101, 251, 255, 0.5);
+}
+
+ody, html {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.App {
+  min-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.app-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important; /* Elimina el padding lateral */
+}
+
+/* Fuerza a todos los elementos section y main a ocupar el 100% */
+section, main, .hero-section, .projects-section, .work-environment {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Elimina márgenes/paddings en elementos hijos directos del body */
+body > * {
+  margin: 0 !important;
+  padding: 0 !important;
 }
