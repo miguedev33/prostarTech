@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const colors = ["#FF0000", "#FF8C00", "#FFD700", "#00FF00", "#00BFFF", "#FF00FF"];
+const colors = ["#4469a9", "#ebecec", "#64faff", "#f6fbf8", "#3765a5", "#f6f8f8"];
 
 export default function UltraFastSlogan() {
   const [explode, setExplode] = useState(false);
