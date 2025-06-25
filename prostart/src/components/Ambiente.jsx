@@ -57,9 +57,9 @@ function Ambiente() {
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.2 }}
           >
-            En Prostart, trabajamos en un ambiente colaborativo y dinámico,
+            <h3>En Prostart, trabajamos en un ambiente colaborativo y dinámico,
             donde cada miembro del equipo aporta su experiencia y creatividad
-            para desarrollar soluciones efectivas.
+            para desarrollar soluciones efectivas.</h3>
           </motion.p>
         </motion.div>
         
@@ -96,10 +96,10 @@ function Ambiente() {
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.2 }}
           >
-            Contamos con equipos de última generación y espacios diseñados
+           <h3> Contamos con equipos de última generación y espacios diseñados
             para fomentar la innovación y la productividad, asegurando que
             podamos cumplir con los plazos y expectativas de nuestros
-            clientes.
+            clientes.</h3>
           </motion.p>
         </motion.div>
         
