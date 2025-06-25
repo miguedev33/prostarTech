@@ -55,21 +55,22 @@ export default function HeroSection() {
         <h1 style={{ fontSize: "2.0rem", marginBottom: "1rem", color: "#ffff" }}>
           <AnimatedText 
             text="Bienvenido a Prostart" 
-            typingSpeed={50}
+            typingSpeed={80}
           />
         </h1>
         <div className="content-text">
           <h3 style={{ color: "#ffff" }}>
             <AnimatedText 
               text="En Prostart, nos especializamos en el desarrollo de software a la medida, ofreciendo soluciones innovadoras y personalizadas para satisfacer las necesidades de nuestros clientes." 
-              typingSpeed={20}
+              typingSpeed={50}
               delay={1.5} // Retraso para que empiece después del título
             />
           </h3>
           <h3 style={{ color: "#ffff" }}>
             <AnimatedText 
-              text="Nuestro equipo de expertos está comprometido en brindar un servicio excepcional, asegurando que cada proyecto se entregue a tiempo y con la más alta calidad." 
-              typingSpeed={20}
+              text="Nuestro equipo de expertos está comprometido en brindar un servicio excepcional, asegurando que cada proyecto se entregue a tiempo y con 
+              la más alta calidad." 
+              typingSpeed={50}
               delay={3.5} // Retraso para que empiece después del primer párrafo
             />
           </h3>

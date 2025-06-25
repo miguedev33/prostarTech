@@ -456,3 +456,44 @@ body > * {
     text-align: left;
   }
 }
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 20px 15px;
+  }
+  
+  .content-text {
+    padding: 0 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .content-text p {
+    margin-bottom: 1.2em;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .main-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* Evita que el texto se corte */
+  .projects-section h2 {
+    white-space: normal;
+    word-break: keep-all;
+    padding: 0 15px;
+  }
+  
+  /* Ajustes específicos para el texto de bienvenida */
+  .welcome-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 0 15px;
+    margin-bottom: 1.5rem;
+  }
+}
