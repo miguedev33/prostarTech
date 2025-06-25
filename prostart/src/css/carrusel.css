@@ -1,0 +1,55 @@
+.projects-section {
+  padding: 1rem;
+
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor horizontal con scroll si es necesario */
+.horizontal-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  /* Para que haga snap al mover el scroll */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* suaviza scroll en móvil */
+}
+
+/* Cada imagen dentro del carrusel */
+.scroll-item {
+  flex: 0 0 auto;          /* No crece ni encoge, ancho fijo */
+  width: 220px;            /* ancho fijo para todas */
+  height: 150px;           /* altura fija para todas */
+  border-radius: 12px;     /* bordes redondeados */
+  overflow: hidden;        /* recortar bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Imagen dentro de cada item */
+.scroll-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Al pasar el cursor sobre el contenedor o la imagen */
+.scroll-item:hover,
+.scroll-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+.colorRealizado{
+  color: #FFFFFF;
+}
+

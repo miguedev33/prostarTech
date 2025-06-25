@@ -1,8 +1,245 @@
-.App {
-  text-align: center;
-  color: #ffffff;
-}
-body{
-  background-color: #0e100f;
+/* ======================
+   VARIABLES GLOBALES
+====================== */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --light-text: #fff;
+  --background-light: #f9f9f9;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
 }
 
+/* ======================
+   ESTILOS BASE
+====================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #0e100f; /* fondo oscuro */
+  text-align: center;
+}
+
+/* ======================
+   CONTENEDOR PRINCIPAL
+====================== */
+.app-container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* ======================
+   HEADER
+====================== */
+.app-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+.logo-container {
+  padding: 0 20px;
+}
+
+.prostart-logo {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.prostart-logo:hover {
+  transform: scale(1.05);
+}
+
+.header-slogan {
+  flex-grow: 1;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ======================
+   SECCIÓN HERO
+====================== */
+.hero-section {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.main-content h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.content-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-text p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* ======================
+   SECCIÓN PROYECTOS
+====================== */
+.projects-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.projects-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  margin: 30px auto;
+  max-width: 100%;
+}
+
+/* ======================
+   ENTORNO DE TRABAJO
+====================== */
+.work-environment {
+  margin: 50px 0;
+}
+
+.work-environment h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.work-environment-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.work-environment-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.work-text,
+.work-image {
+  flex: 1 1 50%;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.work-text h3 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.environment-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.environment-image:hover {
+  transform: scale(1.02);
+}
+
+/* ======================
+   FOOTER
+====================== */
+.app-footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--light-text);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  fill: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .header-slogan {
+    margin-top: 15px;
+  }
+
+  .work-environment-row,
+  .work-environment-row.reverse {
+    flex-direction: column;
+  }
+
+  .work-text,
+  .work-image {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .footer-copyright {
+    text-align: left;
+  }
+}
