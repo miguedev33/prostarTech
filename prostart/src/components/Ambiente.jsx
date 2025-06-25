@@ -96,7 +96,7 @@ function Ambiente() {
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.2 }}
           >
-           <h3> Contamos con equipos de última generación y espacios diseñados
+           <h3>cContamos con equipos de última generación y espacios diseñados
             para fomentar la innovación y la productividad, asegurando que
             podamos cumplir con los plazos y expectativas de nuestros
             clientes.</h3>
